@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Портфолио Никитина </title>
+</head>
+<meta charset="utf-8" />
+<style>
+.fig {
+    text-align: center; /* Выравнивание по центру */ 
+   }
+<!--Маркеры для списка-->
+ a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   } 
+    a:hover {
+    color: white; /* Цвет ссылки при наведении на нее курсора мыши */  
+    background: gray; /* Цвет фона */
+   }
+
+  </style>
+  
+<body bgcolor="#FFFFFF" link="0" vlink="#0" alink="#0">
+<br>
+<script type="text/javascript">
+<!--
+function tekst(msg,ctrlwidth)
+{
+msg = " "+msg
+newmsg = msg
+while (newmsg.length < ctrlwidth) {newmsg += msg}
+document.write ('<form name="Tekst">')
+document.write ('<input name="tekst" value= "'+newmsg+'" size= '+ctrlwidth+' />')
+document.write ('</form>')
+prokrutka()
+}
+function prokrutka()
+{
+NowMsg=document.Tekst.tekst.value
+NowMsg=NowMsg.substring(1,NowMsg.length)+NowMsg.substring(0,1)
+document.Tekst.tekst.value = NowMsg
+bannerid=setTimeout("prokrutka()",100)
+}
+//-->
+</script>
+<script type="text/javascript">
+tekst("Сайт портфолио Никитиной Марины Михайловны",200)
+</script>
+
+<p align="center"><font size="+2"><b>Добро пожаловать на стартовую страницу, выбери любый пункт меню выше.</b><br></font></p><hr>
+<br>
+</style>
+<body bgcolor="#FFFFFF" link="0" vlink="#0" alink="#0">
+<p class="fig"><img width="450" height="300" src="images/avtor1.jpg" ></p>
+<p align="center">ФИО: Никитина Марина Михайловна<BR> 
+ИКГ: ИЭУИС 4-3<BR>
+ВУЗ: НИУ МГСУ<BR>
+Место жительства: г.Москва(общ №4)<BR>
+Место регистрации: г.Александров, Владимирская обл.<BR>
+
+Контакты: <a href="mailto:nikitina-marina1999@mail.ru"> Написать мне </a><BR></p>
+
+
+<BR>
+Также можно отправить сообщение мне на почту непосредственно через ввод ниже
+<form name="search">
+    <input type="text" name="key"></input>
+    <input type="submit" name="send" value="Отправить" />
+</form>
+<script>
+function sendForm(e){
+     
+    // получаем значение поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    if(val.length>30){// ограничеине символов
+        alert("Недопустимая длина строки");
+        e.preventDefault();
+    }   
+    else
+        alert("Функция временно не доступна, используйтя кнопку Написать мне");
+}
+ 
+var sendButton = document.search.send;
+sendButton.addEventListener("click", sendForm);
+</script>
+
+
+
+</body>
+
+</html> 
